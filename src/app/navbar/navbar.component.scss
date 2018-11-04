@@ -1,0 +1,38 @@
+.sidenav-container {
+  height: 100%;
+
+  .material-icons {
+    font-size:35px;
+    color:white;
+  }
+  .sidenav {
+    min-width: 7%;
+    background-color:#3700B3;
+    .sidenav .mat-toolbar {
+      background: inherit;
+    }
+
+    .mat-nav-list {
+      background:inherit;
+    }
+
+    .mat-toolbar {
+      background-color:#3700B3;
+    }
+
+  }
+
+  .mat-sidenav-content.top-bar {
+    //margin-left: 5%;
+    .mat-toolbar.mat-primary {
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color:#3700B3;
+    }
+  }
+}
+
+
+
+
