@@ -17,7 +17,7 @@ export class CurrencyExchangeService {
 
   public async getRate(): Promise<any> {
      try {
-       this.results = await this.apiClient.get<any[]>({
+       return this.results = await this.apiClient.get<any[]>({
           url: 'http://localhost:3000/currency/getrate/'
        });
      } catch (error) {
@@ -27,7 +27,7 @@ export class CurrencyExchangeService {
 
   public async getLatestRate(): Promise<any> {
     try {
-      this.results = await this.apiClient.get<any[]>({
+      return this.results = await this.apiClient.get<any[]>({
         url: 'http://localhost:3000/currency/latest'
       });
     } catch (error) {

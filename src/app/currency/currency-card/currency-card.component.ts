@@ -11,14 +11,22 @@ import { CurrencyExchangeService } from 'src/app/core/services/currency-exchange
 })
 export class CurrencyCardComponent implements OnInit {
 
+  title: string;
+  content: string;
   base: string;
   currency: Currency;
-  constructor(currencyexchange: CurrencyExchangeService, apiclient: ApiClient) {
+  constructor(private currencyexchange: CurrencyExchangeService, private apiclient: ApiClient) {
     currencyexchange = new CurrencyExchangeService(apiclient);
     console.log(currencyexchange);
    }
 
   ngOnInit() {
+
+    const data = this.currencyexchange.getRate();
+
+    this.title = 'Current Rate';
+    this.content = '';
+    console.log(data);
   }
 
 }

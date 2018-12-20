@@ -6,7 +6,8 @@
     color:white;
   }
   .sidenav {
-    min-width: 7%;
+    max-width: 3%;
+    width:100%;
     background-color:#3700B3;
     .sidenav .mat-toolbar {
       background: inherit;
@@ -22,12 +23,14 @@
 
   }
 
-  .mat-sidenav-content.top-bar {
-    //margin-left: 5%;
+  .mat-sidenav-content.dashboard-container {
+      max-height: 95%;
+      max-width: 100%;
     .mat-toolbar.mat-primary {
+      width:100%;
       position: sticky;
       top: 0;
-      z-index: 1;
+      z-index: 5;
       background-color:#3700B3;
     }
   }

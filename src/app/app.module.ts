@@ -1,3 +1,4 @@
+import { PositionsService } from './core/services/positions.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -8,12 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule,
   MatListModule, MatGridListModule, MatCardModule, MatMenuModule,
-  MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import {GridsterModule} from 'angular-gridster2';
+
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TableComponent } from './table/table.component';
 import { CurrencyCardComponent } from './currency/currency-card/currency-card.component';
 import { BaseCardComponent } from './shared/base-card/base-card.component';
-import { BaseCardSpawnerComponent } from './shared/base-card/base-card-factory.component';
+import { GridsterDashboardComponent } from './gridster-dashboard/gridster-dashboard/gridster-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,7 @@ import { BaseCardSpawnerComponent } from './shared/base-card/base-card-factory.c
     TableComponent,
     CurrencyCardComponent,
     BaseCardComponent,
-    BaseCardSpawnerComponent
+    GridsterDashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +44,10 @@ import { BaseCardSpawnerComponent } from './shared/base-card/base-card-factory.c
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    GridsterModule
   ],
-  providers: [],
+  providers: [PositionsService],
   bootstrap: [AppComponent],
   exports: [CurrencyCardComponent]
 })

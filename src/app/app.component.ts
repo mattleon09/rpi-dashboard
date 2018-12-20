@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {GridsterConfig, GridsterItem} from 'angular-gridster2';
 
 @Component({
   selector: 'app-root',

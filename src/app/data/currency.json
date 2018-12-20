@@ -1,0 +1,8 @@
+{
+  "base": "100 USD",
+  "conversions": [
+    { "amount": 916.7582, "currency": "SEK" },
+    { "amount": 7183.9799, "currency": "HTG" },
+    { "amount": 131.35680000000002, "currency": "CAD" }
+  ]
+}
